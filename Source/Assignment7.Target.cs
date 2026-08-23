@@ -11,5 +11,6 @@ public class Assignment7Target : TargetRules
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;
 		ExtraModuleNames.Add("Assignment7");
+		ExtraModuleNames.Add("Test");
 	}
 }

@@ -8,7 +8,12 @@
 			"Name": "Assignment7",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
-		}
+		},
+                {
+			"Name": "Test",
+         		"Type": "Runtime",
+        		"LoadingPhase": "PreDefault"
+    		}
 	],
 	"Plugins": [
 		{
