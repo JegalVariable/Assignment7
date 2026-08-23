@@ -2,7 +2,7 @@
 
 ATestActor::ATestActor()
 {
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 }
 
@@ -10,11 +10,13 @@ void ATestActor::BeginPlay()
 {
 	Super::BeginPlay();
 	
-}
+	UE_LOG(LogTemp, Warning, TEXT("TestActor BeginPlay!"));
 
-void ATestActor::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
+	GEngine->AddOnScreenDebugMessage(
+		-1,
+		5.0f,
+		FColor::Red,
+		TEXT("TestActor BeginPlay!")
+	);
 }
 

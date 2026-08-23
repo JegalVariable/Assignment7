@@ -10,6 +10,7 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "Test/TestActor.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -126,4 +127,15 @@ void AAssignment7Character::Look(const FInputActionValue& Value)
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
 	}
+}
+
+void AAssignment7Character::BeginPlay()
+{
+	Super::BeginPlay();
+	
+	ATestActor* TestActor = GetWorld()->SpawnActor<ATestActor>(
+		ATestActor::StaticClass(),
+		GetActorLocation(),
+		GetActorRotation()
+	);
 }
