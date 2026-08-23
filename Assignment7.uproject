@@ -7,13 +7,19 @@
 		{
 			"Name": "Assignment7",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
 		},
-                {
+		{
 			"Name": "Test",
-         		"Type": "Runtime",
-        		"LoadingPhase": "PreDefault"
-    		}
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
 	],
 	"Plugins": [
 		{
