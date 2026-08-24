@@ -226,7 +226,7 @@ Plugins/
     └── Temporary.uplugin
 ```
 
-GitHub 저장소에서도 `Plugins/Temporary` 아래에 `Resources`, `Source/Temporary`, `Temporary.uplugin`이 구성되어 있습니다.
+GitHub 저장소에서도 `Plugins/Temporary` 아래에 `Content`, `Source/Temporary`, `Temporary.uplugin`이 구성되어 있습니다.
 
 ---
 
@@ -265,18 +265,13 @@ GitHub 저장소에서도 `Plugins/Temporary` 아래에 `Resources`, `Source/Tem
 ```text
 Plugins/Temporary/Source/Temporary/
 ├── Private/
+│   └── Temporary.cpp
 ├── Public/
+│   └── Temporary.h
 └── Temporary.Build.cs
 ```
 
 `Temporary.Build.cs`에서 플러그인 모듈이 사용할 Unreal Engine 모듈을 설정했습니다.
-
-```cpp
-PublicDependencyModuleNames.AddRange(new string[]
-{
-    "Core"
-});
-```
 
 ---
 
@@ -348,11 +343,13 @@ Assignment7/
 │
 └── Plugins/
     └── Temporary/
-        ├── Resources/
+        ├── Content/
         ├── Source/
         │   └── Temporary/
         │       ├── Private/
+        │       │   └── Temporary.cpp
         │       ├── Public/
+        │       │   └── Temporary.h
         │       └── Temporary.Build.cs
         │
         └── Temporary.uplugin
